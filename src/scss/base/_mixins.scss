@@ -1,0 +1,25 @@
+@import '../base/vars';
+
+@mixin mediaTablet{
+    @media screen and (max-width: $tablet){
+        @content;
+    }
+}
+
+@mixin mediaLaptop{
+    @media screen and (max-width: $laptop){
+        @content;
+    }
+}
+
+@mixin mediaTablet{
+    @media screen and (max-width: $tablet){
+        @content;
+    }
+}
+
+@mixin mediaMobile{
+    @media screen and (max-width: $mobile){
+        @content;
+    }
+}

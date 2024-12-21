@@ -1,0 +1,38 @@
+footer {
+    background: rgb(34, 34, 36);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+  .footer__left {
+    color: rgb(251, 251, 251);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  .footer__right {
+    margin-top: 10px;
+    display: flex;
+    gap: 7.5px;
+  }
+  .footer__icon {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  .footer__icon:hover {
+    background-color: rgb(241, 109, 127);
+  }
+  .footer__link img {
+    padding: 8px;
+  }
+  .footer__link img:hover {
+    filter: invert(98%) sepia(11%) saturate(7%) hue-rotate(243deg)
+      brightness(112%) contrast(100%);
+  }

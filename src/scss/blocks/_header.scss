@@ -1,0 +1,121 @@
+@import "../base/vars";
+
+
+.header {
+  position: relative;
+  background: rgb(34, 34, 34);
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__left-logo {
+    margin-right: 41px;
+  }
+
+  &__left-search{
+    transition: all .4s;
+
+    &:hover {
+      path {
+        fill: $selectedColor;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__right-link {
+    margin-left: 33px;
+    transition: all .4s;
+
+    &:hover {
+
+      path {
+        fill: $selectedColor;
+      }
+    }
+  }
+
+  &__right-menu {
+    cursor: pointer;
+    background: transparent;
+    transition: all .4s;
+
+    &:hover {
+      path {
+        fill: $selectedColor;
+      }
+    }
+  }
+  
+
+  &__nav {
+    position: absolute;
+    display: none;
+    top: 75px;
+    right: -500px;
+    background: rgb(255, 255, 255);
+    box-shadow: 6px 4px 35px rgba($color: #000000, $alpha: 0.21);
+    transition: right .5s;
+    width: $widthMenuBurger;
+    box-sizing: border-box;
+  }
+
+  #burger {
+    position: absolute;
+    left: -9999999999px;
+    visibility: hidden;
+
+    &:checked ~ .header__nav {
+      display: block;
+      z-index: 20;
+      right: 0;
+    }
+  }
+
+  &__nav-content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+  }
+
+  &__nav-heading {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:hover {
+      color: $selectedColor;
+    }
+  }
+
+  &__nav-item[open] .header__nav-heading{
+    color: $selectedColor;
+  }
+
+  &__nav-link-box {
+    margin-top: 12px;
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__nav-link{
+    color: $colorLink;
+
+    transition: color .3s;
+
+    &:hover {
+      color: $selectedColor;
+    }
+  }
+}

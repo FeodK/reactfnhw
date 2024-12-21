@@ -1,0 +1,149 @@
+@import '../base/mixins';
+
+.form {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__title {
+    color: $colorTitle;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+  }
+
+  &__input {
+    outline: none;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    padding-top: 13px;
+    padding-left: 17px;
+    padding-bottom: 16px;
+    border: 1px solid rgb(164, 164, 164);
+    transition: all 0.4s;
+
+    &:focus {
+      transform: scale(1.01);
+      box-shadow: 12px 8px 18px 0px rgba(0, 0, 0, 0.13);
+    }
+
+    &_light::placeholder {
+      color: #b1b1b1;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    padding: 10px 14px 12px 14px;
+    width: 108px;
+    overflow: none;
+    background: transparent;
+    border: 1px solid rgb(164, 164, 164);
+
+    color: $colorText;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 13px;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: scale(1.03);
+      color: white;
+      background-color: $selectedColor;
+      border-color: $selectedColor;
+      box-shadow: 12px 10px 18px 0px rgba(0, 0, 0, 0.13);
+    }
+
+    &:focus {
+      transform: scale(1.03);
+      color: white;
+      background-color: $selectedColor;
+      border-color: $selectedColor;
+      box-shadow: 12px 10px 18px 0px rgba(0, 0, 0, 0.13);
+    }
+  }
+
+  &__hint {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    color: $colorText;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+
+  &__big-btn {
+    cursor: pointer;
+    outline: none;
+    width: 178px;
+    background: $selectedColor;
+    border: 1px solid $selectedColor;
+    padding: 16px 29px;
+    display: flex;
+    gap: 31px;
+    align-items: center;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    transition: all .4s;
+
+    &:hover {
+        transform: scale(1.03);
+        color: $selectedColor;
+        background-color: white;
+        box-shadow: 12px 10px 18px 0px rgba(0, 0, 0, 0.13);
+
+        path {
+            fill: $selectedColor;
+        }
+      }
+
+    &:focus {
+        transform: scale(1.03);
+        color: $selectedColor;
+        background-color: white;
+        box-shadow: 12px 10px 18px 0px rgba(0, 0, 0, 0.13);
+
+        path {
+            fill: $selectedColor;
+        }
+      }
+  }
+}
+
+.gender {
+  margin-top: 31px;
+  margin-bottom: 33px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__radio {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+  }
+
+  &__label {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 13px;
+  }
+}
